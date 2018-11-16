@@ -1,0 +1,213 @@
+section.product
+    .container.container-mod
+        h1.product-ttl Одежда для девочек
+        .row
+            // FILTER SECTION
+            .col.col-md-3.col-xl-3
+                // form for ajax send informations about filtering product
+                form#mainfilterform.filter(method="post" action="")
+                    .filter-catigories
+                        a.filter-trigger.filter-arrow.js-filter-trigger(href="/") Категории
+                        ul.filter-catigories--list.js-filter-categories
+                          li(val="1") Категория 1
+                          li(val="2") Категория 2
+                          li(val="3") Категория 3  
+                        input#filter-categories(type="hidden" name='cetegory' value="")
+
+                    .filter-size
+                        h3 Размер
+                        select#filter-size.filter-select.filter-arrow(name='size')
+                            option(value="56") 56
+                            option(value="58") 58
+                            option(value="60") 60
+                            option(value="62") 62
+
+                    .filter-color
+                        h3 Цвет
+                        select#filter-color.filter-select.filter-arrow(name='color')
+                            option(value="") Цвет
+                            option(value="red") red
+                            option(value="green") green
+                            option(value="blue") blue
+                            option(value="yellow") yellow
+
+                    .filter-material
+                        a.filter-trigger.filter-trigger-material.filter-arrow.js-filter-trigger(href="/") Материал
+                        .filter-material-box
+                            ul#filter-material-list.filter-select--meterial.js-filter-select--meterial
+                                li.filter-active(value="Все") Все
+                                li(val="100% хлопок") 100% хлопок 
+                                li(val="Трикотаж") Трикотаж
+                                li(val="Шерсть") Шерсть
+                                li(val="Джинсовый") Джинсовый
+                                li(val="Составной") Составной
+                                li(val="100% хлопок") 100% хлопок 
+                                li(val="Трикотаж") Трикотаж
+                                li(val="Шерсть") Шерсть
+                                li(val="Джинсовый") Джинсовый
+                                li(val="Составной") Составной
+                                li(val="100% хлопок") 100% хлопок 
+                                li(val="Трикотаж") Трикотаж
+                                li(val="Шерсть") Шерсть
+                                li(val="Джинсовый") Джинсовый
+                                li(val="Составной") Составной
+                            input#filter-material(type="hidden" name='material' value="")
+
+                    input#btn-send.filter-btn(type="submit" value="Применить фильтр")
+
+            // PRODUCT SECTION
+
+            .col.col-md-9.col-xl-9 
+                .product-box
+                    .row
+                        .col-sm-6.col-md-6.col-lg-4
+                            a.product-item(href="/")
+                                span.product-badge.product-badge-new Новинка
+                                img(src="img/body.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                .product-name  Свитер в полоску
+                                .product-price 123 грн.
+
+                        .col-sm-6.col-md-6.col-lg-4
+                            a.product-item(href="/")
+                                span.product-badge.product-badge-hit Хит продаж
+                                img(src="img/dress.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o
+                                .product-name  Платье с цветочным принтом
+                                .product-price 123 грн.            
+
+                        .col-sm-6.col-md-6.col-lg-4
+                            a.product-item(href="/")
+                                img(src="img/prod.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o    
+                                .product-name  Джинсовый комбинезон
+                                .product-price 123 грн.
+
+                // SECTION WITH SLIDER
+
+                .product-similar
+                    h2.product-similar-ttl Похожие товары
+                    .row.product-slide
+                        .col.col-md-4
+                            a.product-item(href="/")
+                                img(src="img/body.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                .product-name  Свитер в полоску
+                                .product-price 123 грн.
+
+                        .col.col-md-4
+                            a.product-item(href="/")
+                                img(src="img/dress.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o
+                                .product-name  Платье с цветочным принтом
+                                .product-price 123 грн.            
+
+                        .col.col-md-4
+                            a.product-item(href="/")
+                                img(src="img/prod.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o    
+                                .product-name  Джинсовый комбинезон
+                                .product-price 123 грн.
+
+                        .col.col-md-4
+                            a.product-item(href="/")
+                                img(src="img/prod.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o
+                                .product-name  Свитер в полоску
+                                .product-price 123 грн.
+
+                        .col.col-md-4
+                             a.product-item(href="/")
+                                img(src="img/prod.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o
+                                .product-name  Платье с цветочным принтом
+                                .product-price 123 грн.
+
+                        .col.col-md-4
+                            a.product-item(href="/")
+                                img(src="img/prod.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o
+                                .product-name  Джинсовый комбинезон
+                                .product-price 123 грн.
+
+                        .col.col-md-4
+                            a.product-item(href="/")
+                                img(src="img/prod.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o
+                                .product-name  Свитер в полоску
+                                .product-price 123 грн.
+
+                        .col.col-md-4
+                             a.product-item(href="/")
+                                img(src="img/prod.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o
+                                .product-price 123 грн.
+
+                        .col.col-md-4
+                            a.product-item(href="/")
+                                img(src="img/prod.jpg" alt="image")
+                                ul.rating.clearfix
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o.checked 
+                                    li.rating-icon.fa.fa-star-o.checked
+                                    li.rating-icon.fa.fa-star-o 
+                                .product-name  Джинсовый комбинезон
+                                .product-price 123 грн.
+
+                    .slick-controls 

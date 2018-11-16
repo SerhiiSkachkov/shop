@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <title>Главная</title>
+    <link rel="icon" href="" type="">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700|Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="loaded">
+    <!-- BEGIN BODY-->
+    <div class="main-wrapper">
+      <!-- BEGIN CONTENT-->
+      <main class="content"> 
+        <!-- PRODUCT SECTION-->
+        <section class="product">
+          <div class="container container-mod">
+            <h1 class="product-ttl">Одежда для девочек</h1>
+            <div class="row">
+              <!-- FILTER SECTION-->
+              <div class="col col-md-3 col-xl-3">
+                <!-- form for ajax send informations about filtering product-->
+                <form class="filter" id="mainfilterform" method="post" action="">
+                  <div class="filter-catigories"><a class="filter-trigger filter-arrow js-filter-trigger" href="/">Категории</a>
+                    <ul class="filter-catigories--list js-filter-categories">
+                      <li val="1">Категория 1</li>
+                      <li val="2">Категория 2</li>
+                      <li val="3">Категория 3  </li>
+                    </ul>
+                    <input id="filter-categories" type="hidden" name="cetegory" value="">
+                  </div>
+                  <div class="filter-size">
+                    <h3>Размер</h3>
+                    <select class="filter-select filter-arrow" id="filter-size" name="size">
+                      <option value="56">56</option>
+                      <option value="58">58</option>
+                      <option value="60">60</option>
+                      <option value="62">62</option>
+                    </select>
+                  </div>
+                  <div class="filter-color">
+                    <h3>Цвет</h3>
+                    <select class="filter-select filter-arrow" id="filter-color" name="color">
+                      <option value="">Цвет</option>
+                      <option value="red">red</option>
+                      <option value="green">green</option>
+                      <option value="blue">blue</option>
+                      <option value="yellow">yellow</option>
+                    </select>
+                  </div>
+                  <div class="filter-material"><a class="filter-trigger filter-trigger-material filter-arrow js-filter-trigger" href="/">Материал</a>
+                    <div class="filter-material-box">
+                      <ul class="filter-select--meterial js-filter-select--meterial" id="filter-material-list">
+                        <li class="filter-active" value="Все">Все</li>
+                        <li val="100% хлопок">100% хлопок </li>
+                        <li val="Трикотаж">Трикотаж</li>
+                        <li val="Шерсть">Шерсть</li>
+                        <li val="Джинсовый">Джинсовый</li>
+                        <li val="Составной">Составной</li>
+                        <li val="100% хлопок">100% хлопок </li>
+                        <li val="Трикотаж">Трикотаж</li>
+                        <li val="Шерсть">Шерсть</li>
+                        <li val="Джинсовый">Джинсовый</li>
+                        <li val="Составной">Составной</li>
+                        <li val="100% хлопок">100% хлопок </li>
+                        <li val="Трикотаж">Трикотаж</li>
+                        <li val="Шерсть">Шерсть</li>
+                        <li val="Джинсовый">Джинсовый</li>
+                        <li val="Составной">Составной</li>
+                      </ul>
+                      <input id="filter-material" type="hidden" name="material" value="">
+                    </div>
+                  </div>
+                  <input class="filter-btn" id="btn-send" type="submit" value="Применить фильтр">
+                </form>
+              </div>
+              <!-- PRODUCT SECTION-->
+              <div class="col col-md-9 col-xl-9"> 
+                <div class="product-box">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-4"><a class="product-item" href="/"><span class="product-badge product-badge-new">Новинка</span><img src="img/body.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                        </ul>
+                        <div class="product-name"> Свитер в полоску</div>
+                        <div class="product-price">123 грн.</div></a></div>
+                    <div class="col-sm-6 col-md-6 col-lg-4"><a class="product-item" href="/"><span class="product-badge product-badge-hit">Хит продаж</span><img src="img/dress.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o"></li>
+                        </ul>
+                        <div class="product-name"> Платье с цветочным принтом</div>
+                        <div class="product-price">123 грн.            </div></a></div>
+                    <div class="col-sm-6 col-md-6 col-lg-4"><a class="product-item" href="/"><img src="img/prod.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o">   </li>
+                        </ul>
+                        <div class="product-name"> Джинсовый комбинезон</div>
+                        <div class="product-price">123 грн.</div></a></div>
+                  </div>
+                </div>
+                <!-- SECTION WITH SLIDER-->
+                <div class="product-similar">
+                  <h2 class="product-similar-ttl">Похожие товары</h2>
+                  <div class="row product-slide">
+                    <div class="col col-md-4"><a class="product-item" href="/"><img src="img/body.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                        </ul>
+                        <div class="product-name"> Свитер в полоску</div>
+                        <div class="product-price">123 грн.</div></a></div>
+                    <div class="col col-md-4"><a class="product-item" href="/"><img src="img/dress.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o"></li>
+                        </ul>
+                        <div class="product-name"> Платье с цветочным принтом</div>
+                        <div class="product-price">123 грн.            </div></a></div>
+                    <div class="col col-md-4"><a class="product-item" href="/"><img src="img/prod.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o">   </li>
+                        </ul>
+                        <div class="product-name"> Джинсовый комбинезон</div>
+                        <div class="product-price">123 грн.</div></a></div>
+                    <div class="col col-md-4"><a class="product-item" href="/"><img src="img/prod.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o"></li>
+                        </ul>
+                        <div class="product-name"> Свитер в полоску</div>
+                        <div class="product-price">123 грн.</div></a></div>
+                    <div class="col col-md-4"><a class="product-item" href="/"><img src="img/prod.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o"></li>
+                        </ul>
+                        <div class="product-name"> Платье с цветочным принтом</div>
+                        <div class="product-price">123 грн.</div></a></div>
+                    <div class="col col-md-4"><a class="product-item" href="/"><img src="img/prod.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o"></li>
+                        </ul>
+                        <div class="product-name"> Джинсовый комбинезон</div>
+                        <div class="product-price">123 грн.</div></a></div>
+                    <div class="col col-md-4"><a class="product-item" href="/"><img src="img/prod.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o"></li>
+                        </ul>
+                        <div class="product-name"> Свитер в полоску</div>
+                        <div class="product-price">123 грн.</div></a></div>
+                    <div class="col col-md-4"><a class="product-item" href="/"><img src="img/prod.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o"></li>
+                        </ul>
+                        <div class="product-price">123 грн.</div></a></div>
+                    <div class="col col-md-4"><a class="product-item" href="/"><img src="img/prod.jpg" alt="image">
+                        <ul class="rating clearfix">
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o checked"> </li>
+                          <li class="rating-icon fa fa-star-o checked"></li>
+                          <li class="rating-icon fa fa-star-o"> </li>
+                        </ul>
+                        <div class="product-name"> Джинсовый комбинезон</div>
+                        <div class="product-price">123 грн.</div></a></div>
+                  </div>
+                  <div class="slick-controls"> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- BEGIN HEADER-->
+      <header>       </header>
+      <!-- BEGIN FOOTER  -->
+      <footer></footer>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/components/cusel-min-2.5.js">   </script>
+    <script src="js/components/jquery.mousewheel.js"></script>
+    <script src="js/components/jquery.jscrollpane.min.js">   </script>
+    <script src="js/components/slick.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
